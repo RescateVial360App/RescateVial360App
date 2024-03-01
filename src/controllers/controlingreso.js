@@ -7,10 +7,16 @@ let cedulaBaseDatos="123"
 
 
 let botonFormulario=document.getElementById("botonIngreso")
+<<<<<<< HEAD
+let botonFormularioGl=document.getElementById("botonIngreso")
+let botonFormularioGm=document.getElementById("botonIngreso")
+let botonFormularioGf=document.getElementById("botonIngreso")
+=======
 //let botonFormulario=document.getElementById("botonIngreso")
 //let botonFormulario=document.getElementById("botonIngreso")
 
 
+>>>>>>> cc9452a74685ebf6a7728e0e879ed1c983a20de0
 let cajaFormularioPlaca=document.getElementById("placa")
 let cajaFormularioCiudad=document.getElementById("ciudad")
 let cajaFormularioCedula=document.getElementById("cedula")
@@ -18,7 +24,7 @@ let cajaFormularioCedula=document.getElementById("cedula")
 //DETECTANDO EVENTOS CON JS
 botonFormulario.addEventListener("click",function(evento){
 
-    evento.preventDefault()
+    evento.preventDefault() 
 
     //1.capturamos la informacion del formulario
    let placaUsuario=cajaFormularioPlaca.value  
@@ -33,7 +39,7 @@ botonFormulario.addEventListener("click",function(evento){
         icon: "success"
       })
 
-      window.location.href="#"// ruta 
+      window.location.href=""// ruta 
 
    }else{
         Swal.fire({
@@ -44,14 +50,49 @@ botonFormulario.addEventListener("click",function(evento){
       });
 
    }
-  
-
 
 })
 
+<<<<<<< HEAD
+botonFormularioGl.addEventListener("click",function(evento){
+
+   evento.preventDefault() 
+
+   //1.capturamos la informacion del formulario
+  let placaUsuario=cajaFormularioPlaca.value  
+  let ciudadUsuario=cajaFormularioCiudad.value 
+  let cedulaUsuario=cajaFormularioCedula.value
+
+  //Validando los datos del usuario
+  if(placaBaseDatos==placaUsuario &&ciudadBaseDatos==ciudadUsuario &&cedulaBaseDatos==cedulaUsuario ){
+   Swal.fire({
+       title: "Bienvenido "+placaUsuario,
+       text: "Tus datos son correctos",
+       icon: "success"
+     })
+
+     window.location.href=""// ruta 
+
+  }else{
+       Swal.fire({
+       icon: "error",
+       title: "Oops..."+placaUsuario+ "tienes problemas",
+       text: "Verifica tus credenciales",
+       
+     });
+
+  }
+
+})
+
+botonFormularioGm.addEventListener("click",function(evento){
+
+   evento.preventDefault() 
+=======
 botonFormulario.addEventListener("click",function(evento){
 
    evento.preventDefault()
+>>>>>>> cc9452a74685ebf6a7728e0e879ed1c983a20de0
 
    //1.capturamos la informacion del formulario
   let placaUsuario=cajaFormularioPlaca.value  
@@ -77,14 +118,11 @@ botonFormulario.addEventListener("click",function(evento){
      });
 
   }
- 
-
-
 })
 
-botonFormulario.addEventListener("click",function(evento){
+botonFormularioGf.addEventListener("click",function(evento){
 
-   evento.preventDefault()
+   evento.preventDefault() 
 
    //1.capturamos la informacion del formulario
   let placaUsuario=cajaFormularioPlaca.value  
@@ -110,11 +148,7 @@ botonFormulario.addEventListener("click",function(evento){
      });
 
   }
- 
-
-
 })
-
 
 /*cajaFormularioCiudad.addEventListener("click", function(){alert("digite su Ciudad")})
 cajaFormularioPlaca.addEventListener("click", function(){alert("digite su Placa")})
