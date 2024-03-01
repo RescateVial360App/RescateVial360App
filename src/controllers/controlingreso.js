@@ -6,23 +6,16 @@ let ciudadBaseDatos="Medellin"
 let cedulaBaseDatos="123"
 
 
-let botonFormulario=document.getElementById("botonIngreso")
-<<<<<<< HEAD
-let botonFormularioGl=document.getElementById("botonIngreso")
-let botonFormularioGm=document.getElementById("botonIngreso")
-let botonFormularioGf=document.getElementById("botonIngreso")
-=======
-//let botonFormulario=document.getElementById("botonIngreso")
-//let botonFormulario=document.getElementById("botonIngreso")
 
-
->>>>>>> cc9452a74685ebf6a7728e0e879ed1c983a20de0
+let botonFormularioGl=document.getElementById("botonIngresoGl")
+let botonFormularioGm=document.getElementById("botonIngresoGm")
+let botonFormularioGf=document.getElementById("botonIngresoGf")
 let cajaFormularioPlaca=document.getElementById("placa")
 let cajaFormularioCiudad=document.getElementById("ciudad")
 let cajaFormularioCedula=document.getElementById("cedula")
 
 //DETECTANDO EVENTOS CON JS
-botonFormulario.addEventListener("click",function(evento){
+botonFormularioGl.addEventListener("click",function(evento){
 
     evento.preventDefault() 
 
@@ -53,7 +46,6 @@ botonFormulario.addEventListener("click",function(evento){
 
 })
 
-<<<<<<< HEAD
 botonFormularioGl.addEventListener("click",function(evento){
 
    evento.preventDefault() 
@@ -71,7 +63,7 @@ botonFormularioGl.addEventListener("click",function(evento){
        icon: "success"
      })
 
-     window.location.href=""// ruta 
+    
 
   }else{
        Swal.fire({
@@ -88,11 +80,6 @@ botonFormularioGl.addEventListener("click",function(evento){
 botonFormularioGm.addEventListener("click",function(evento){
 
    evento.preventDefault() 
-=======
-botonFormulario.addEventListener("click",function(evento){
-
-   evento.preventDefault()
->>>>>>> cc9452a74685ebf6a7728e0e879ed1c983a20de0
 
    //1.capturamos la informacion del formulario
   let placaUsuario=cajaFormularioPlaca.value  
@@ -107,7 +94,7 @@ botonFormulario.addEventListener("click",function(evento){
        icon: "success"
      })
 
-     window.location.href="#"// ruta 
+    
 
   }else{
        Swal.fire({
@@ -137,7 +124,7 @@ botonFormularioGf.addEventListener("click",function(evento){
        icon: "success"
      })
 
-     window.location.href="#"// ruta 
+    
 
   }else{
        Swal.fire({
