@@ -3,10 +3,14 @@
 
 let placaBaseDatos="ABC123"
 let ciudadBaseDatos="Medellin"
-let cedulaBaseDatos="123456"
+let cedulaBaseDatos="123"
 
 
 let botonFormulario=document.getElementById("botonIngreso")
+//let botonFormulario=document.getElementById("botonIngreso")
+//let botonFormulario=document.getElementById("botonIngreso")
+
+
 let cajaFormularioPlaca=document.getElementById("placa")
 let cajaFormularioCiudad=document.getElementById("ciudad")
 let cajaFormularioCedula=document.getElementById("cedula")
@@ -45,9 +49,72 @@ botonFormulario.addEventListener("click",function(evento){
 
 })
 
-cajaFormularioPlaca.addEventListener("click", function(){alert("digite su Email")})
-cajaFormularioCiudad.addEventListener("click", function(){alert("digite su nombre")})
-cajaFormularioCedula.addEventListener("click", function(){alert("digite su contraseña")})
+botonFormulario.addEventListener("click",function(evento){
+
+   evento.preventDefault()
+
+   //1.capturamos la informacion del formulario
+  let placaUsuario=cajaFormularioPlaca.value  
+  let ciudadUsuario=cajaFormularioCiudad.value 
+  let cedulaUsuario=cajaFormularioCedula.value
+
+  //Validando los datos del usuario
+  if(placaBaseDatos==placaUsuario &&ciudadBaseDatos==ciudadUsuario &&cedulaBaseDatos==cedulaUsuario ){
+   Swal.fire({
+       title: "Bienvenido "+placaUsuario,
+       text: "Tus datos son correctos",
+       icon: "success"
+     })
+
+     window.location.href="#"// ruta 
+
+  }else{
+       Swal.fire({
+       icon: "error",
+       title: "Oops..."+placaUsuario+ "tienes problemas",
+       text: "Verifica tus credenciales",
+       
+     });
+
+  }
+ 
+
+
+})
+
+botonFormulario.addEventListener("click",function(evento){
+
+   evento.preventDefault()
+
+   //1.capturamos la informacion del formulario
+  let placaUsuario=cajaFormularioPlaca.value  
+  let ciudadUsuario=cajaFormularioCiudad.value 
+  let cedulaUsuario=cajaFormularioCedula.value
+
+  //Validando los datos del usuario
+  if(placaBaseDatos==placaUsuario &&ciudadBaseDatos==ciudadUsuario &&cedulaBaseDatos==cedulaUsuario ){
+   Swal.fire({
+       title: "Bienvenido "+placaUsuario,
+       text: "Tus datos son correctos",
+       icon: "success"
+     })
+
+     window.location.href="#"// ruta 
+
+  }else{
+       Swal.fire({
+       icon: "error",
+       title: "Oops..."+placaUsuario+ "tienes problemas",
+       text: "Verifica tus credenciales",
+       
+     });
+
+  }
+ 
+
+
+})
+
 
 /*cajaFormularioCiudad.addEventListener("click", function(){alert("digite su Ciudad")})
 cajaFormularioPlaca.addEventListener("click", function(){alert("digite su Placa")})
